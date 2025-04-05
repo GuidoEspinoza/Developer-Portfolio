@@ -24,7 +24,7 @@ const HeroSection = () => {
                         Hola, <br />
                         Yo soy {' '}
                         <span className=" text-pink-500">Guido Espinoza</span>
-                        {` , soy `}
+                        {`, soy `}
                         <span className=" text-[#16f2b3]">Front-End Developer </span>
                         Profesional.
                     </h1>
