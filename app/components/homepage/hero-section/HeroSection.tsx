@@ -112,7 +112,9 @@ const HeroSection = () => {
                             </div>
                             <div>
                                 <span className="ml-4 lg:ml-8 mr-2 text-white">experiencia:</span>
-                                <span className="text-orange-400">&#39;3 años&#39;</span>
+                                <span className="text-gray-400">{`'`}</span>
+                                <span className="text-orange-400">3 años</span>
+                                <span className="text-gray-400">{`'`}</span>
                                 <span className="text-gray-400">,</span>
                             </div>
                             <div>
