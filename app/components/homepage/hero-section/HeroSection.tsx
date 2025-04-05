@@ -89,13 +89,19 @@ const HeroSection = () => {
                                 <span className="text-gray-400">{`',`}</span>
                             </div>
                             <div className="ml-4 lg:ml-8 mr-2">
-                                <span className=" text-white">habilidades:</span>
+                                <span className=" text-white">tecnologías:</span>
                                 <span className="text-gray-400">{`['`}</span>
                                 <span className="text-amber-300">HTML</span>
                                 <span className="text-gray-400">{"', '"}</span>
                                 <span className="text-amber-300">CSS</span>
                                 <span className="text-gray-400">{"', '"}</span>
+                                <span className="text-amber-300">Javascript</span>
+                                <span className="text-gray-400">{"', '"}</span>
                                 <span className="text-amber-300">ReactJS</span>
+                                <span className="text-gray-400">{"', '"}</span>
+                                <span className="text-amber-300">Typescript</span>
+                                <span className="text-gray-400">{"', '"}</span>
+                                <span className="text-amber-300">Tailwind</span>
                                 <span className="text-gray-400">{"', '"}</span>
                                 <span className="text-amber-300">NextJS</span>
                                 <span className="text-gray-400">{"', '"}</span>
@@ -105,8 +111,8 @@ const HeroSection = () => {
                                 <span className="text-gray-400">{"'],"}</span>
                             </div>
                             <div>
-                                <span className="ml-4 lg:ml-8 mr-2 text-white">trabajador:</span>
-                                <span className="text-orange-400">true</span>
+                                <span className="ml-4 lg:ml-8 mr-2 text-white">experiencia:</span>
+                                <span className="text-orange-400">'3 años'</span>
                                 <span className="text-gray-400">,</span>
                             </div>
                             <div>
@@ -117,36 +123,10 @@ const HeroSection = () => {
                             <div>
                                 <span className="ml-4 lg:ml-8 mr-2 text-white">resolvente:</span>
                                 <span className="text-orange-400">true</span>
-                                <span className="text-gray-400">,</span>
                             </div>
                             <div>
-                                <span className="ml-4 lg:ml-8 mr-2 text-green-400">contratable:</span>
-                                <span className="text-orange-400">function</span>
-                                <span className="text-gray-400">{'() {'}</span>
+                                <span className="text-gray-400">{`};`}</span>
                             </div>
-                            <div>
-                                <span className="ml-8 lg:ml-16 mr-2 text-orange-400">return</span>
-                                <span className="text-gray-400">{`(`}</span>
-                            </div>
-                            <div>
-                                <span className="ml-12 lg:ml-24 text-cyan-400">this.</span>
-                                <span className="mr-2 text-white">trabajador</span>
-                                <span className="text-amber-300">&amp;&amp;</span>
-                            </div>
-                            <div>
-                                <span className="ml-12 lg:ml-24 text-cyan-400">this.</span>
-                                <span className="mr-2 text-white">resolvente</span>
-                                <span className="text-amber-300">&amp;&amp;</span>
-                            </div>
-                            <div>
-                                <span className="ml-12 lg:ml-24 text-cyan-400">this.</span>
-                                <span className="mr-2 text-white">habilidades.length</span>
-                                <span className="mr-2 text-amber-300">&gt;=</span>
-                                <span className="text-orange-400">5</span>
-                            </div>
-                            <div><span className="ml-8 lg:ml-16 mr-2 text-gray-400">{`);`}</span></div>
-                            <div><span className="ml-4 lg:ml-8 text-gray-400">{`};`}</span></div>
-                            <div><span className="text-gray-400">{`};`}</span></div>
                         </code>
                     </div>
                 </div>

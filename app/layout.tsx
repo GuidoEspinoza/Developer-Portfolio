@@ -5,6 +5,7 @@ import ScrollToTop from "./components/helper/ScrollToTop";
 import Footer from "./components/Footer";
 
 import "./globals.css";
+import "./card.css"
 
 const inter = Inter({ subsets: ["latin"] });
 
