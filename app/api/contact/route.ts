@@ -9,15 +9,19 @@ type EmailPayload = {
 
 // Create and configure Nodemailer transporter
 const transporter = nodemailer.createTransport({
-    service: 'gmail',
-    host: 'smtp.gmail.com',
-    port: 587,
-    secure: false,
+    service: 'hostinger',
+    host: 'smtp.hostinger.com',
+    port: 465,
+    secure: true,
     auth: {
         user: process.env.EMAIL_ADDRESS,
         pass: process.env.EMAIL_PASSKEY,
     },
 });
+
+// host: "smpt.hostinger.com",
+//     port: 465,
+//     secure: true,
 
 // HTML email template
 const generateEmailTemplate = (name: string, email: string, userMessage: string) => `
@@ -40,7 +44,7 @@ async function sendEmail(payload: EmailPayload, message: string) {
     const { name, email, message: userMessage } = payload;
 
     const mailOptions = {
-        from: "Portfolio",
+        from: process.env.EMAIL_ADDRESS,
         to: process.env.EMAIL_ADDRESS,
         subject: `Nuevo mensaje de ${name}`,
         text: message,

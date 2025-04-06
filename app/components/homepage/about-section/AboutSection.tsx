@@ -18,7 +18,7 @@ const AboutSection = () => {
                         Mi nombre es Guido Espinoza, soy un desarrollador Front-End especializado en ReactJS y VTEX IO, con experiencia en la creación y optimización de más de 10 sitios web de ecommerce. He liderado proyectos desde cero, garantizando resultados medibles, como una reducción del 20% en tiempos de desarrollo y un aumento del 15% en rendimiento. 
                     </p>
                     <p className="text-gray-200 text-sm lg:text-lg mt-4">
-                        Me encanta crear experiencias web atractivas y funcionales. Siempre estoy buscando aprender nuevas tecnologías y mejorar mis habilidades. En mi tiempo libre, disfruto de la lectura, la música y algunos videojuegos. Estoy comprometido con la calidad, el aprendizaje continuo y el liderazgo técnico en equipos multidisciplinarios.
+                        Me encanta crear experiencias web atractivas y funcionales. Siempre estoy buscando aprender nuevas tecnologías y mejorar mis habilidades. En mi tiempo libre, disfruto de escribir código, la música y algunos videojuegos. Estoy comprometido con la calidad, el aprendizaje continuo y el liderazgo técnico en equipos multidisciplinarios.
                     </p>
                 </div>
                 <div className="flex justify-center order-1 lg:order-2">

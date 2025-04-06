@@ -32,7 +32,7 @@ const Experience = () => {
             id: 4,
             title: "FrontEnd Developer Junior",
             company: "Ecomsur (actual Infracommerce)",
-            duration: "(Febrero 2022 - Agosto 2022)"
+            duration: "(Noviembre 2021 - Agosto 2022)"
         }
     ]
     return (

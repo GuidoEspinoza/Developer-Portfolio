@@ -113,17 +113,22 @@ const HeroSection = () => {
                             <div>
                                 <span className="ml-4 lg:ml-8 mr-2 text-white">experiencia:</span>
                                 <span className="text-gray-400">{`'`}</span>
-                                <span className="text-orange-400">3 años</span>
+                                <span className="text-orange-400">Más de 3 años desarrollando aplicaciones web modernas y escalables</span>
                                 <span className="text-gray-400">{`'`}</span>
                                 <span className="text-gray-400">,</span>
                             </div>
                             <div>
-                                <span className="ml-4 lg:ml-8 mr-2 text-white">entusiasta:</span>
+                                <span className="ml-4 lg:ml-8 mr-2 text-white">aprendizajeContinuo:</span>
                                 <span className="text-orange-400">true</span>
                                 <span className="text-gray-400">,</span>
                             </div>
                             <div>
-                                <span className="ml-4 lg:ml-8 mr-2 text-white">resolvente:</span>
+                                <span className="ml-4 lg:ml-8 mr-2 text-white">apasionadoPorElDesarrollo:</span>
+                                <span className="text-orange-400">true</span>
+                                <span className="text-gray-400">,</span>
+                            </div>
+                            <div>
+                                <span className="ml-4 lg:ml-8 mr-2 text-white">solucionadorDeProblemas:</span>
                                 <span className="text-orange-400">true</span>
                             </div>
                             <div>
