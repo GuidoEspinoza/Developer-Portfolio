@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import Navbar from "./components/Navbar";
 import ScrollToTop from "./components/helper/ScrollToTop";
 import Footer from "./components/Footer";
@@ -31,6 +32,7 @@ export default function RootLayout({
           <ScrollToTop />
         </main>
         <Footer />
+        <SpeedInsights/>
       </body>
     </html>
   );
