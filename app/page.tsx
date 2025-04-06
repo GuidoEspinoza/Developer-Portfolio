@@ -7,6 +7,7 @@ const AboutSection = dynamic(() => import("./components/homepage/about-section/A
 const ExperienceSection = dynamic(() => import("./components/homepage/experience-section/ExperienceSection"), { ssr: false });
 const SkillsSection = dynamic(() => import("./components/homepage/skills-section/SkillsSection"), { ssr: false });
 const EducationSection = dynamic(() => import("./components/homepage/education-section/EducationSection"), { ssr: false });
+const ContactSection = dynamic(() => import("./components/homepage/contact-section/ContactSection"), { ssr: false });
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <ExperienceSection />
       <SkillsSection />
       <EducationSection />
+      <ContactSection />
     </div>
   );
 }
