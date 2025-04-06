@@ -25,7 +25,7 @@ const Experience = () => {
         {
             id: 3,
             title: "FrontEnd Developer Specialist",
-            company: "ITGLobers",
+            company: "ITGlobers",
             duration: "(Agosto 2022 - Febrero 2023)"
         },
         {
