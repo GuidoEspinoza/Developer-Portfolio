@@ -14,6 +14,13 @@ export const metadata: Metadata = {
   title: "Portafolio de Guido Espinoza. Frontend Developer",
   description:
     "Este es el portafolio de Guido Espinoza. Soy un desarrollador FrontEnd, me especializo en ecommerce con la plataforma Vtex. Me gusta mucho aprender cosas nuevas, no tengo miedo a equivocarme y siempre doy lo mejor de mi.",
+  authors: [{name: "Guido Espinoza"}],
+  publisher: "Guido Espinoza",
+  keywords: ["Frontend Developer, Portafolio, Vtex, Ecommerce, Desarrollo Web, Guido Espinoza"],
+  robots: {
+    index: true,
+    follow: true,
+  }
 };
 
 export default function RootLayout({
@@ -32,7 +39,7 @@ export default function RootLayout({
           <ScrollToTop />
         </main>
         <Footer />
-        <SpeedInsights/>
+        <SpeedInsights />
       </body>
     </html>
   );

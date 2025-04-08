@@ -34,7 +34,6 @@ const generateEmailTemplate = (name: string, email: string, userMessage: string)
       <blockquote style="border-left: 4px solid #007BFF; padding-left: 10px; margin-left: 0;">
         ${userMessage}
       </blockquote>
-      <p style="font-size: 12px; color: #888;">Haga clic en Responder para responder al remitente.</p>
     </div>
   </div>
 `;

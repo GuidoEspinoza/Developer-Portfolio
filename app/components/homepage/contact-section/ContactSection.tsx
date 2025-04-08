@@ -10,7 +10,7 @@ function ContactSection() {
     return (
         <div id="contact" className="my-12 lg:my-16 relative mt-24 text-white">
             <div className="hidden lg:flex flex-col items-center absolute top-24 -right-8">
-                <span className="bg-[#1a1443] w-fit text-white rotate-90 p-2 px-5 text-xl rounded-md">
+                <span className="bg-[#1a1443] w-fit text-white rotate-90 p-2 px-5 text-2xl rounded-md tracking-wider">
                     CONTACTO
                 </span>
                 <span className="h-36 w-[2px] bg-[#1a1443]"></span>
@@ -24,7 +24,7 @@ function ContactSection() {
                                 className="bg-[#8b98a5] p-2 rounded-full hover:bg-[#16f2b3] hover:scale-110 transition-all duration-300 text-gray-800 cursor-pointer"
                                 size={36}
                             />
-                            <span>contacto@guidoespinoza.dev</span>
+                            <a className='text-white transition-colors duration-300 hover:text-pink-600' href='mailto:contacto@guidoespinoza.dev'>contacto@guidoespinoza.dev</a>
                         </p>
                         <p className="text-sm md:text-xl flex items-center gap-3">
                             <CiLocationOn

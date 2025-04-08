@@ -101,7 +101,7 @@ function ContactForm() {
                                 setError({ ...error, email: !isValidEmail(userInput.email) });
                             }}
                         />
-                        {error.email && <p className="text-sm text-red-400">Please provide a valid email!</p>}
+                        {error.email && <p className="text-sm text-red-400">Por favor, ingresa un correo válido</p>}
                     </div>
 
                     <div className="flex flex-col gap-2">
@@ -122,7 +122,7 @@ function ContactForm() {
                             ¡Todos los campos son requeridos!
                         </p>}
                         <button
-                            className="flex items-center gap-1 hover:gap-3 rounded-full bg-gradient-to-r from-pink-500 to-violet-600 px-5 md:px-12 py-2.5 md:py-3 text-center text-xs md:text-sm font-medium uppercase tracking-wider text-white no-underline transition-all duration-200 ease-out hover:text-white hover:no-underline md:font-semibold"
+                            className="flex items-center gap-1 hover:gap-3 rounded-full bg-gradient-to-r from-pink-500 to-violet-600 px-5 md:px-12 py-2.5 md:py-3 text-center text-xs md:text-sm font-medium uppercase tracking-wider text-white no-underline transition-all duration-200 ease-out hover:text-white hover:no-underline md:font-semibold cursor-pointer"
                             role="button"
                             onClick={handleSendMail}
                             disabled={isLoading}
