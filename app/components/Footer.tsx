@@ -10,8 +10,8 @@ function Footer() {
                     <div className="absolute top-0 h-[1px] w-1/2  bg-gradient-to-r from-transparent via-violet-500 to-transparent"></div>
                 </div>
                 <div className="flex flex-col md:flex-row items-center justify-center">
-                    <p className="text-sm">
-                        © Web Personal desarrollada por <Link target="_blank" href="https://www.linkedin.com/in/guido-espinoza/" className="text-[#16f2b3]">Guido Espinoza</Link>
+                    <p className="text-base">
+                        © Web Personal desarrollada por <Link target="_blank" href="https://www.linkedin.com/in/guido-espinoza/" className="text-pink-500">Guido Espinoza</Link>
                     </p>
                 </div>
             </div>
