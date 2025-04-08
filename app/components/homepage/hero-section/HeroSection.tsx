@@ -50,11 +50,15 @@ const HeroSection = () => {
                     </div>
 
                     <div className="flex items-center gap-3">
-                        <Link href="#contact" className="bg-gradient-to-r to-pink-500 from-violet-600 p-[1px] rounded-full transition-all duration-300 hover:from-pink-500 hover:to-violet-600">
-                            <button tabIndex={0} className="px-3 text-xs md:px-8 py-3 md:py-4 bg-[#0d1224] rounded-full border-none text-center md:text-sm font-medium uppercase tracking-wider text-[#ffff] no-underline transition-all duration-200 ease-out  md:font-semibold flex items-center gap-1 hover:gap-3 cursor-pointer">
+                        <Link
+                            href="#contact"
+                            aria-label="Ir a la sección de contacto"
+                            className="bg-gradient-to-r to-pink-500 from-violet-600 p-[1px] rounded-full transition-all duration-300 hover:from-pink-500 hover:to-violet-600"
+                        >
+                            <div className="px-3 text-xs md:px-8 py-3 md:py-4 bg-[#0d1224] rounded-full text-center md:text-sm font-medium uppercase tracking-wider text-[#ffff] no-underline transition-all duration-200 ease-out md:font-semibold flex items-center gap-1 hover:gap-3 cursor-pointer">
                                 <span>Contáctame</span>
                                 <RiContactsFill size={16} />
-                            </button>
+                            </div>
                         </Link>
 
                         <Link className="flex items-center gap-1 hover:gap-3 rounded-full bg-gradient-to-r from-pink-500 to-violet-600 px-3 md:px-8 py-3 md:py-4 text-center text-xs md:text-sm font-medium uppercase tracking-wider text-white no-underline transition-all duration-200 ease-out hover:text-white hover:no-underline md:font-semibold" role="button" target="_blank" href='https://wrdc7yopavc4jezh.public.blob.vercel-storage.com/Curriculum-Guido-Espinoza-iroBY8SBY5Ke0z23F88YRV6X1z71Pr.pdf'
