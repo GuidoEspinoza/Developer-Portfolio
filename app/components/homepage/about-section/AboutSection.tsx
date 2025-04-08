@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const AboutSection = () => {
     return (
-        <div id="about" className="relative my-12 lg:my-16">
+        <section id="about" className="relative my-12 lg:my-16">
             <div className="hidden lg:flex flex-col items-center absolute top-16 -right-8 my-5 lg:py-8">
                 <span className="bg-[#1a1443] w-fit text-white rotate-90 p-2 px-5 text-2xl rounded-md tracking-wider">
                     Acerca de mí
@@ -31,7 +31,7 @@ const AboutSection = () => {
                     />
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 

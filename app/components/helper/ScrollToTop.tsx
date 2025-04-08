@@ -27,7 +27,7 @@ const ScrollToTop = () => {
     const onClickBtn = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
     return (
-        <button className={btnCls} onClick={onClickBtn}>
+        <button className={btnCls} aria-label="back-to-top" tabIndex={0} title="back-to-top" onClick={onClickBtn}>
             <FaArrowUp />
         </button>
     );

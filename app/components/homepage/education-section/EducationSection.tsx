@@ -52,7 +52,7 @@ const educations = [
 
 const Education = () => {
     return (
-        <div id="education" className="relative z-50 border-t my-12 lg:my-24 border-[#25213b]">
+        <section id="education" className="relative z-50 border-t my-12 lg:my-24 border-[#25213b]">
             <Image
                 src={section}
                 alt="Hero"
@@ -132,7 +132,7 @@ const Education = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 

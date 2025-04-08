@@ -8,7 +8,7 @@ import ContactForm from './FormContactSection';
 
 function ContactSection() {
     return (
-        <div id="contact" className="my-12 lg:my-16 relative mt-24 text-white">
+        <section id="contact" className="my-12 lg:my-16 relative mt-24 text-white">
             <div className="hidden lg:flex flex-col items-center absolute top-24 -right-8">
                 <span className="bg-[#1a1443] w-fit text-white rotate-90 p-2 px-5 text-2xl rounded-md tracking-wider">
                     CONTACTO
@@ -37,13 +37,13 @@ function ContactSection() {
                         </p>
                     </div>
                     <div className="mt-8 lg:mt-16 flex items-center gap-5 lg:gap-10">
-                        <Link target="_blank" href='https://github.com/GuidoEspinoza'>
+                        <Link target="_blank" aria-label='GitHub' href='https://github.com/GuidoEspinoza'>
                             <IoLogoGithub
                                 className="bg-[#8b98a5] p-3 rounded-full hover:bg-[#16f2b3] hover:scale-110 transition-all duration-300 text-gray-800 cursor-pointer"
                                 size={48}
                             />
                         </Link>
-                        <Link target="_blank" href='https://www.linkedin.com/in/guido-espinoza/'>
+                        <Link target="_blank" aria-label='LinkedIn' href='https://www.linkedin.com/in/guido-espinoza/'>
                             <BiLogoLinkedin
                                 className="bg-[#8b98a5] p-3 rounded-full hover:bg-[#16f2b3] hover:scale-110 transition-all duration-300 text-gray-800 cursor-pointer"
                                 size={48}
@@ -52,7 +52,7 @@ function ContactSection() {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 
