@@ -2,8 +2,8 @@
 import Image from "next/image";
 import { BsPersonWorkspace } from "react-icons/bs";
 import experience from '@/app/assets/lottie/code.json'
-import AnimationLottie from "@/app/components/helper/AnimationLottie";
-import GlowCard from "@/app/components/helper/GlowCard";
+import AnimationLottie from "@/app/components/ui/AnimationLottie";
+import GlowCard from "../../ui/GlowCard";
 
 import section from '@/app/assets/svg/section.svg';
 import blurCard from '@/app/assets/svg/blur-card.svg';

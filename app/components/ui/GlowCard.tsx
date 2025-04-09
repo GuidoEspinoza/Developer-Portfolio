@@ -2,9 +2,14 @@
 
 import { useEffect } from 'react';
 
-const GlowCard = ({ children, identifier }) => {
+interface GlowCardProps {
+    children: React.ReactNode;
+    identifier: string;
+}
+
+const GlowCard: React.FC<GlowCardProps> = ({ children, identifier }) => {
     useEffect(() => {
-        const CONTAINER = document.querySelector(`.glow-container-${identifier}`);
+        const CONTAINER = document.querySelector(`.glow-container-${identifier}`) as HTMLElement;
         const CARDS = document.querySelectorAll(`.glow-card-${identifier}`);
 
         const CONFIG = {
@@ -16,9 +21,10 @@ const GlowCard = ({ children, identifier }) => {
             opacity: 0,
         };
 
-        const UPDATE = (event) => {
+        const UPDATE = (event: PointerEvent) => {
             for (const CARD of CARDS) {
-                const CARD_BOUNDS = CARD.getBoundingClientRect();
+                const cardElement = CARD as HTMLElement;
+                const CARD_BOUNDS = cardElement.getBoundingClientRect();
 
                 if (
                     event?.x > CARD_BOUNDS.left - CONFIG.proximity &&
@@ -26,9 +32,9 @@ const GlowCard = ({ children, identifier }) => {
                     event?.y > CARD_BOUNDS.top - CONFIG.proximity &&
                     event?.y < CARD_BOUNDS.top + CARD_BOUNDS.height + CONFIG.proximity
                 ) {
-                    CARD.style.setProperty('--active', 1);
+                    cardElement.style.setProperty('--active', '1');
                 } else {
-                    CARD.style.setProperty('--active', CONFIG.opacity);
+                    cardElement.style.setProperty('--active', CONFIG.opacity.toString());
                 }
 
                 const CARD_CENTER = [
@@ -43,16 +49,16 @@ const GlowCard = ({ children, identifier }) => {
 
                 ANGLE = ANGLE < 0 ? ANGLE + 360 : ANGLE;
 
-                CARD.style.setProperty('--start', ANGLE + 90);
+                cardElement.style.setProperty('--start', (ANGLE + 90).toString());
             }
         };
 
         document.body.addEventListener('pointermove', UPDATE);
 
         const RESTYLE = () => {
-            CONTAINER.style.setProperty('--gap', CONFIG.gap);
-            CONTAINER.style.setProperty('--blur', CONFIG.blur);
-            CONTAINER.style.setProperty('--spread', CONFIG.spread);
+            CONTAINER.style.setProperty('--gap', CONFIG.gap.toString());
+            CONTAINER.style.setProperty('--blur', CONFIG.blur.toString());
+            CONTAINER.style.setProperty('--spread', CONFIG.spread.toString());
             CONTAINER.style.setProperty(
                 '--direction',
                 CONFIG.vertical ? 'column' : 'row'
@@ -60,9 +66,8 @@ const GlowCard = ({ children, identifier }) => {
         };
 
         RESTYLE();
-        UPDATE();
+        UPDATE(new PointerEvent('pointermove'));
 
-        // Cleanup event listener
         return () => {
             document.body.removeEventListener('pointermove', UPDATE);
         };

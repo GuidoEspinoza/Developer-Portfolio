@@ -6,8 +6,8 @@ import { BsPersonWorkspace } from "react-icons/bs";
 import { MdDownload } from "react-icons/md";
 
 import lottieFile from '../../../assets/lottie/study.json';
-import AnimationLottie from "../../helper/AnimationLottie";
-import GlowCard from "../../helper/GlowCard";
+import AnimationLottie from "@/app/components/ui/AnimationLottie";
+import GlowCard from "../../ui/GlowCard";
 
 import section from '@/app/assets/svg/section.svg';
 import blurCard from '@/app/assets/svg/blur-card.svg';

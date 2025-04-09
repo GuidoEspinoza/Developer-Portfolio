@@ -19,10 +19,6 @@ const transporter = nodemailer.createTransport({
     },
 });
 
-// host: "smpt.hostinger.com",
-//     port: 465,
-//     secure: true,
-
 // HTML email template
 const generateEmailTemplate = (name: string, email: string, userMessage: string) => `
   <div style="font-family: Arial, sans-serif; color: #333; padding: 20px; background-color: #f4f4f4;">

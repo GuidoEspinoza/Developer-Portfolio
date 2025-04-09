@@ -2,7 +2,11 @@
 
 import Lottie from "lottie-react";
 
-const AnimationLottie = ({ animationPath }) => {
+interface AnimationLottieProps {
+    animationPath: object;
+}
+
+const AnimationLottie: React.FC<AnimationLottieProps> = ({ animationPath }) => {
     const defaultOptions = {
         loop: true,
         autoplay: true,
