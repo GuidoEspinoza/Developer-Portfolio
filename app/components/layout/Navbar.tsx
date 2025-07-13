@@ -1,16 +1,16 @@
 import Link from "next/link";
 import { navigationLinks } from '@/app/constants/navigation';
-import { siteMetadata } from '@/app/constants/metadata';
+import { UI_TEXT_CONSTANTS } from '@/app/constants/ui-text-constants';
 
 const Navbar = () => {
     return (
-        <nav className="bg-transparent" aria-label="Menú de navegación" role="navigation">
+        <nav className="bg-transparent" aria-label={UI_TEXT_CONSTANTS.ariaLabelNavigation} role="navigation">
             <div className="flex items-center justify-between py-5">
                 <div className="flex flex-shrink-0 items-center">
                     <Link
                         href="/"
                         className="text-[#16f2b3] text-3xl font-bold">
-                        {siteMetadata.author.toUpperCase()}
+                        {UI_TEXT_CONSTANTS.personalNameUpper}
                     </Link>
                 </div>
 

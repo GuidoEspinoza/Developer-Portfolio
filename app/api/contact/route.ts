@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
+import { UI_TEXT_CONSTANTS } from '@/app/constants/ui-text-constants';
 
 type EmailPayload = {
     name: string;
@@ -23,10 +24,10 @@ const transporter = nodemailer.createTransport({
 const generateEmailTemplate = (name: string, email: string, userMessage: string) => `
   <div style="font-family: Arial, sans-serif; color: #333; padding: 20px; background-color: #f4f4f4;">
     <div style="max-width: 600px; margin: auto; background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);">
-      <h2 style="color: #007BFF;">Nuevo mensaje recibido</h2>
-      <p><strong>Nombre:</strong> ${name}</p>
-      <p><strong>Email:</strong> ${email}</p>
-      <p><strong>Mensaje:</strong></p>
+      <h2 style="color: #007BFF;">${UI_TEXT_CONSTANTS.emailHtmlTitle}</h2>
+      <p><strong>${UI_TEXT_CONSTANTS.emailHtmlNameLabel}</strong> ${name}</p>
+      <p><strong>${UI_TEXT_CONSTANTS.emailHtmlEmailLabel}</strong> ${email}</p>
+      <p><strong>${UI_TEXT_CONSTANTS.emailHtmlMessageLabel}</strong></p>
       <blockquote style="border-left: 4px solid #007BFF; padding-left: 10px; margin-left: 0;">
         ${userMessage}
       </blockquote>
@@ -41,7 +42,7 @@ async function sendEmail(payload: EmailPayload, message: string) {
     const mailOptions = {
         from: process.env.EMAIL_ADDRESS,
         to: process.env.EMAIL_ADDRESS,
-        subject: `Nuevo mensaje de ${name}`,
+        subject: `${UI_TEXT_CONSTANTS.contactFormEmailSubject} ${name}`,
         text: message,
         html: generateEmailTemplate(name, email, userMessage),
         replyTo: email,
@@ -52,7 +53,7 @@ async function sendEmail(payload: EmailPayload, message: string) {
         return true;
     } catch (error) {
         if (error instanceof Error) {
-            console.error('Error al enviar el mensaje:', error.message);
+            console.error(UI_TEXT_CONSTANTS.emailErrorSending, error.message);
         }
         return false;
     }
@@ -63,7 +64,7 @@ export async function POST(request: Request) {
         const payload: EmailPayload = await request.json();
         const { name, email, message: userMessage } = payload;
 
-        const message = `Nuevo mensaje de ${name}\n\nEmail: ${email}\n\nMensaje:\n\n${userMessage}\n\n`;
+        const message = `${UI_TEXT_CONSTANTS.contactFormEmailSubject} ${name}\n\n${UI_TEXT_CONSTANTS.emailHtmlEmailLabel} ${email}\n\n${UI_TEXT_CONSTANTS.emailHtmlMessageLabel}\n\n${userMessage}\n\n`;
 
         // Send email
         const emailSuccess = await sendEmail(payload, message);

@@ -4,42 +4,17 @@ import { BsPersonWorkspace } from "react-icons/bs";
 import experience from '@/app/assets/lottie/code.json'
 import AnimationLottie from "@/app/components/ui/AnimationLottie";
 import GlowCard from "../../ui/GlowCard";
+import { UI_TEXT_CONSTANTS } from "@/app/constants/ui-text-constants";
 
 import section from '@/app/assets/svg/section.svg';
 import blurCard from '@/app/assets/svg/blur-card.svg';
 
 const Experience = () => {
-    const experiences = [
-        {
-            id: 1,
-            title: 'Desarrollador FrontEnd Senior',
-            company: "Nexitty Consulting",
-            duration: "(Noviembre 2024 - Presente)"
-        },
-        {
-            id: 2,
-            title: "Desarrollador FrontEnd | Project Manager",
-            company: "Canal Cero",
-            duration: "(Junio 2023 - Noviembre 2024)"
-        },
-        {
-            id: 3,
-            title: "FrontEnd Developer Specialist",
-            company: "ITGlobers",
-            duration: "(Agosto 2022 - Febrero 2023)"
-        },
-        {
-            id: 4,
-            title: "FrontEnd Developer Junior",
-            company: "Ecomsur (actual Infracommerce)",
-            duration: "(Noviembre 2021 - Agosto 2022)"
-        }
-    ]
     return (
         <section id="experience" className="relative z-50 border-t my-12 lg:my-24 border-[#25213b]">
             <Image
                 src={section}
-                alt="Hero"
+                alt={UI_TEXT_CONSTANTS.altHero}
                 width={1572}
                 height={795}
                 className="absolute top-0 -z-10"
@@ -49,7 +24,7 @@ const Experience = () => {
                 <div className="flex  items-center">
                     <span className="w-24 h-[2px] bg-[#1a1443]"></span>
                     <span className="bg-[#1a1443] w-fit text-white p-2 px-5 text-2xl rounded-md tracking-wider">
-                        Experiencia
+                        {UI_TEXT_CONSTANTS.experienceSectionTitle}
                     </span>
                     <span className="w-24 h-[2px] bg-[#1a1443]"></span>
                 </div>
@@ -66,12 +41,12 @@ const Experience = () => {
                     <div>
                         <div className="flex flex-col gap-6">
                             {
-                                experiences.map(experience => (
+                                UI_TEXT_CONSTANTS.experiences.map(experience => (
                                     <GlowCard key={experience.id} identifier={`experience-${experience.id}`}>
                                         <div className="p-3 relative">
                                             <Image
                                                 src={blurCard}
-                                                alt="Hero"
+                                                alt={UI_TEXT_CONSTANTS.altBlurCard}
                                                 width={1080}
                                                 height={200}
                                                 className="absolute bottom-0 opacity-80"

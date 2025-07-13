@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { TbMailForward } from "react-icons/tb";
 import { toast } from "react-toastify";
+import { UI_TEXT_CONSTANTS } from "@/app/constants/ui-text-constants";
 
 function ContactForm() {
     const [error, setError] = useState({ email: false, required: false });
@@ -48,10 +49,10 @@ function ContactForm() {
 
             if (!res.ok) {
                 const errorData = await res.json();
-                throw new Error(errorData.message || "Algo salió mal");
+                throw new Error(errorData.message || UI_TEXT_CONSTANTS.contactFormErrorGeneric);
             }
 
-            toast.success("¡Mensaje enviado correctamente!");
+            toast.success(UI_TEXT_CONSTANTS.contactFormSuccessMessage);
             setUserInput({
                 name: "",
                 email: "",
@@ -59,9 +60,9 @@ function ContactForm() {
             });
         } catch (error) {
             if (error instanceof Error) {
-                toast.error(error.message || "Error al enviar el mensaje");
+                toast.error(error.message || UI_TEXT_CONSTANTS.contactFormErrorMessage);
             } else {
-                toast.error("Ha ocurrido un error inesperado");
+                toast.error(UI_TEXT_CONSTANTS.contactFormErrorUnexpected);
             }
         } finally {
             setIsLoading(false);
@@ -70,15 +71,15 @@ function ContactForm() {
 
     return (
         <div>
-            <p className="font-medium mb-5 text-[#16f2b3] text-xl uppercase">Contáctame</p>
+            <p className="font-medium mb-5 text-[#16f2b3] text-xl uppercase">{UI_TEXT_CONSTANTS.contactFormTitle}</p>
             <div className="max-w-3xl text-white rounded-lg border border-[#464c6a] p-3 lg:p-5">
                 <p className="text-sm text-[#d3d8e8]">
-                    {"Si tienes alguna pregunta o inquietud, no dudes en ponerte en contacto conmigo. Estoy abierto a cualquier oportunidad de trabajo que se alinee con mis habilidades e intereses."}
+                    {UI_TEXT_CONSTANTS.contactFormDescription}
                 </p>
                 <form className="mt-6 flex flex-col gap-4" onSubmit={handleSendMail}>
                     <div className="flex flex-col gap-2">
                         <label htmlFor="name" className="text-base">
-                            Tu Nombre:
+                            {UI_TEXT_CONSTANTS.contactFormNameLabel}
                         </label>
                         <input
                             id="name"
@@ -88,7 +89,7 @@ function ContactForm() {
                             maxLength={100}
                             required
                             aria-required="true"
-                            aria-label="Ingresa tu nombre"
+                            aria-label={UI_TEXT_CONSTANTS.inputNameAriaLabel}
                             onChange={(e) => setUserInput({ ...userInput, name: e.target.value })}
                             onBlur={checkRequired}
                             value={userInput.name}
@@ -97,7 +98,7 @@ function ContactForm() {
 
                     <div className="flex flex-col gap-2">
                         <label htmlFor="email" className="text-base">
-                            Tu Email:
+                            {UI_TEXT_CONSTANTS.contactFormEmailLabel}
                         </label>
                         <input
                             id="email"
@@ -107,7 +108,7 @@ function ContactForm() {
                             maxLength={100}
                             required
                             aria-required="true"
-                            aria-label="Ingresa tu email"
+                            aria-label={UI_TEXT_CONSTANTS.inputEmailAriaLabel}
                             value={userInput.email}
                             onChange={(e) => setUserInput({ ...userInput, email: e.target.value })}
                             onBlur={() => {
@@ -116,13 +117,13 @@ function ContactForm() {
                             }}
                         />
                         {error.email && (
-                            <p className="text-sm text-red-400">Por favor, ingresa un correo válido</p>
+                            <p className="text-sm text-red-400">{UI_TEXT_CONSTANTS.contactFormErrorInvalidEmail}</p>
                         )}
                     </div>
 
                     <div className="flex flex-col gap-2">
                         <label htmlFor="message" className="text-base">
-                            Tu Mensaje:
+                            {UI_TEXT_CONSTANTS.contactFormMessageLabel}
                         </label>
                         <textarea
                             id="message"
@@ -131,7 +132,7 @@ function ContactForm() {
                             maxLength={500}
                             required
                             aria-required="true"
-                            aria-label="Ingresa tu comentario"
+                            aria-label={UI_TEXT_CONSTANTS.inputMessageAriaLabel}
                             onChange={(e) => setUserInput({ ...userInput, message: e.target.value })}
                             onBlur={checkRequired}
                             rows={4}
@@ -141,7 +142,7 @@ function ContactForm() {
 
                     <div className="flex flex-col items-center gap-3">
                         {error.required && (
-                            <p className="text-sm text-red-400">¡Todos los campos son requeridos!</p>
+                            <p className="text-sm text-red-400">{UI_TEXT_CONSTANTS.contactFormErrorRequired}</p>
                         )}
                         <button
                             className="flex items-center gap-1 hover:gap-3 rounded-full bg-gradient-to-r from-pink-500 to-violet-600 px-5 md:px-12 py-2.5 md:py-3 text-center text-xs md:text-sm font-medium uppercase tracking-wider text-white no-underline transition-all duration-200 ease-out hover:text-white hover:no-underline md:font-semibold cursor-pointer"
@@ -150,10 +151,10 @@ function ContactForm() {
                             disabled={isLoading}
                         >
                             {isLoading ? (
-                                <span>Enviando mensaje...</span>
+                                <span>{UI_TEXT_CONSTANTS.contactFormSubmitButtonLoading}</span>
                             ) : (
                                 <span className="flex items-center gap-1">
-                                    ENVIAR MENSAJE
+                                    {UI_TEXT_CONSTANTS.contactFormSubmitButton}
                                     <TbMailForward size={20} />
                                 </span>
                             )}

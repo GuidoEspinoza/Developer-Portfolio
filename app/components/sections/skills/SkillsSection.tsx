@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
+import { UI_TEXT_CONSTANTS } from "@/app/constants/ui-text-constants";
 
 import html from "@/app/assets/svg/html.svg";
 import css from "@/app/assets/svg/css.svg";
@@ -10,18 +11,6 @@ import tailwind from "@/app/assets/svg/tailwind.svg";
 import nextJS from "@/app/assets/svg/nextJS.svg";
 import vtex from "@/app/assets/svg/vtex.svg";
 import git from "@/app/assets/svg/git.svg";
-
-const skillsData: string[] = [
-    'HTML',
-    'CSS',
-    'Javascript',
-    'ReactJS',
-    'Typescript',
-    'Tailwind',
-    'NextJS',
-    'VtexIO',
-    'Git'
-]
 
 const skillsImage = (skill: string) => {
     const skillID = skill.toLowerCase();
@@ -64,7 +53,7 @@ function Skills() {
                 <div className="flex  items-center">
                     <span className="w-24 h-[2px] bg-[#1a1443]"></span>
                     <span className="bg-[#1a1443] w-fit text-white p-2 px-5 text-2xl rounded-md tracking-wider">
-                        Tecnologías
+                        {UI_TEXT_CONSTANTS.skillsSectionTitle}
                     </span>
                     <span className="w-24 h-[2px] bg-[#1a1443]"></span>
                 </div>
@@ -80,7 +69,7 @@ function Skills() {
                     play={true}
                     direction="left"
                 >
-                    {skillsData.map((skill, id) => (
+                    {UI_TEXT_CONSTANTS.skillsData.map((skill, id) => (
                         <div className="w-36 min-w-fit h-fit flex flex-col items-center justify-center transition-all duration-500 m-3 sm:m-5 rounded-lg group relative hover:scale-[1.15] cursor-pointer"
                             key={id}>
                             <div className="h-full w-full rounded-lg border border-[#1f223c] bg-[#11152c] shadow-none shadow-gray-50 group-hover:border-violet-500 transition-all duration-500">

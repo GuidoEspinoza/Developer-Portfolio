@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { UI_TEXT_CONSTANTS } from "@/app/constants/ui-text-constants";
 
 function Footer() {
     return (
@@ -9,7 +10,7 @@ function Footer() {
                 </div>
                 <div className="flex flex-col md:flex-row items-center justify-center">
                     <p className="text-base">
-                        © Web Personal desarrollada por <Link target="_blank" href="https://www.linkedin.com/in/guido-espinoza/" className="text-pink-500">Guido Espinoza</Link>
+                        {UI_TEXT_CONSTANTS.footerCopyright} <Link target="_blank" href={UI_TEXT_CONSTANTS.socialLinks.linkedin} className="text-pink-500">{UI_TEXT_CONSTANTS.footerAuthor}</Link>
                     </p>
                 </div>
             </div>

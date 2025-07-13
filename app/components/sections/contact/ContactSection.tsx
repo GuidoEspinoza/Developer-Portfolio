@@ -5,13 +5,14 @@ import { CiLocationOn } from "react-icons/ci";
 import { IoLogoGithub } from "react-icons/io";
 import { MdAlternateEmail } from "react-icons/md";
 import ContactForm from './FormContactSection';
+import { UI_TEXT_CONSTANTS } from "@/app/constants/ui-text-constants";
 
 function ContactSection() {
     return (
         <section id="contact" className="my-12 lg:my-16 relative mt-24 text-white">
             <div className="hidden lg:flex flex-col items-center absolute top-24 -right-8">
                 <span className="bg-[#1a1443] w-fit text-white rotate-90 p-2 px-5 text-2xl rounded-md tracking-wider">
-                    CONTACTO
+                    {UI_TEXT_CONSTANTS.contactSectionTitle}
                 </span>
                 <span className="h-36 w-[2px] bg-[#1a1443]"></span>
             </div>
@@ -24,7 +25,7 @@ function ContactSection() {
                                 className="bg-[#8b98a5] p-2 rounded-full hover:bg-[#16f2b3] hover:scale-110 transition-all duration-300 text-gray-800 cursor-pointer"
                                 size={36}
                             />
-                            <a className='text-white transition-colors duration-300 hover:text-pink-600' href='mailto:contacto@guidoespinoza.dev'>contacto@guidoespinoza.dev</a>
+                            <a className='text-white transition-colors duration-300 hover:text-pink-600' href={UI_TEXT_CONSTANTS.socialLinks.emailHref}>{UI_TEXT_CONSTANTS.socialLinks.email}</a>
                         </p>
                         <p className="text-sm md:text-xl flex items-center gap-3">
                             <CiLocationOn
@@ -32,18 +33,18 @@ function ContactSection() {
                                 size={36}
                             />
                             <span>
-                                Santiago, Región Metropolitana, Chile
+                                {UI_TEXT_CONSTANTS.personalLocation}
                             </span>
                         </p>
                     </div>
                     <div className="mt-8 lg:mt-16 flex items-center gap-5 lg:gap-10">
-                        <Link target="_blank" aria-label='GitHub' href='https://github.com/GuidoEspinoza'>
+                        <Link target="_blank" aria-label={UI_TEXT_CONSTANTS.ariaLabelGitHub} href={UI_TEXT_CONSTANTS.socialLinks.github}>
                             <IoLogoGithub
                                 className="bg-[#8b98a5] p-3 rounded-full hover:bg-[#16f2b3] hover:scale-110 transition-all duration-300 text-gray-800 cursor-pointer"
                                 size={48}
                             />
                         </Link>
-                        <Link target="_blank" aria-label='LinkedIn' href='https://www.linkedin.com/in/guido-espinoza/'>
+                        <Link target="_blank" aria-label={UI_TEXT_CONSTANTS.ariaLabelLinkedIn} href={UI_TEXT_CONSTANTS.socialLinks.linkedin}>
                             <BiLogoLinkedin
                                 className="bg-[#8b98a5] p-3 rounded-full hover:bg-[#16f2b3] hover:scale-110 transition-all duration-300 text-gray-800 cursor-pointer"
                                 size={48}

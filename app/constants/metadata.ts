@@ -1,13 +1,15 @@
+import { UI_TEXT_CONSTANTS } from "./ui-text-constants";
+
 export const siteMetadata = {
-    title: "Portafolio de Guido Espinoza. Frontend Developer",
-    description: "Este es el portafolio de Guido Espinoza. Soy un desarrollador FrontEnd, me especializo en ecommerce con la plataforma Vtex. Me gusta mucho aprender cosas nuevas, no tengo miedo a equivocarme y siempre doy lo mejor de mi.",
+    title: `Portafolio de ${UI_TEXT_CONSTANTS.personalName}. Frontend Developer`,
+    description: `Este es el portafolio de ${UI_TEXT_CONSTANTS.personalName}. Soy un desarrollador FrontEnd, me especializo en ecommerce con la plataforma Vtex. Me gusta mucho aprender cosas nuevas, no tengo miedo a equivocarme y siempre doy lo mejor de mi.`,
     siteUrl: "https://guidoespinoza.com",
-    author: "Guido Espinoza",
-    email: "contact@guidoespinoza.com",
-    keywords: ["Frontend Developer", "Portafolio", "Vtex", "Ecommerce", "Desarrollo Web", "Guido Espinoza"],
+    author: UI_TEXT_CONSTANTS.personalName,
+    email: UI_TEXT_CONSTANTS.socialLinks.email,
+    keywords: ["Frontend Developer", "Portafolio", "Vtex", "Ecommerce", "Desarrollo Web", UI_TEXT_CONSTANTS.personalName],
     social: {
-        linkedin: "https://www.linkedin.com/in/guido-espinoza/",
-        github: "https://github.com/GuidoEspinoza",
+        linkedin: UI_TEXT_CONSTANTS.socialLinks.linkedin,
+        github: UI_TEXT_CONSTANTS.socialLinks.github,
     },
-    image: "https://wrdc7yopavc4jezh.public.blob.vercel-storage.com/profile_image-eDka2DSUzuoJa9uQ4FmgZvab8rjppC.png"
+    image: UI_TEXT_CONSTANTS.socialLinks.profileImage
 };

@@ -1,28 +1,30 @@
+import { UI_TEXT_CONSTANTS } from "./ui-text-constants";
+
 export const navigationLinks = [
   {
-    name: 'Sobre mí',
+    name: UI_TEXT_CONSTANTS.navAbout,
     path: '#about'
   },
   {
-    name: 'Experiencia',
+    name: UI_TEXT_CONSTANTS.navExperience,
     path: '#experience'
   },
   {
-    name: 'Habilidades',
+    name: UI_TEXT_CONSTANTS.navSkills,
     path: '#skills'
   },
   {
-    name: 'Educación',
+    name: UI_TEXT_CONSTANTS.navEducation,
     path: '#education'
   },
   {
-    name: 'Contacto',
+    name: UI_TEXT_CONSTANTS.navContact,
     path: '#contact'
   }
 ];
 
 export const socialLinks = {
-  github: 'https://github.com/GuidoEspinoza',
-  linkedin: 'https://www.linkedin.com/in/guido-espinoza/',
-  email: 'contact@guidoespinoza.com'
+  github: UI_TEXT_CONSTANTS.socialLinks.github,
+  linkedin: UI_TEXT_CONSTANTS.socialLinks.linkedin,
+  email: UI_TEXT_CONSTANTS.socialLinks.email
 };
