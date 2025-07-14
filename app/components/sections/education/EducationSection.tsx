@@ -39,28 +39,6 @@ const Education = () => {
 
             <div className="py-8">
                 <div className="flex flex-col gap-8">
-                    {/* Animation Section */}
-                    <div className="flex justify-center items-start">
-                        <HologramCard className="p-6 w-fit">
-                            <div className="relative">
-                                <div className="w-64 h-64 relative">
-                                    <AnimationLottie animationPath={lottieFile} />
-                                    
-                                    {/* Overlay scan effect */}
-                                    <div className="absolute inset-0 bg-gradient-to-b from-transparent via-cyber-cyan/5 to-transparent opacity-70 animate-pulse"></div>
-                                </div>
-                                
-                                {/* Info Display */}
-                                <div className="mt-4 p-3 bg-cyber-surface/50 rounded border border-cyber-cyan/30">
-                                    <div className="font-mono text-xs text-center space-y-1">
-                                        <div className="text-cyber-cyan">EDUCATION_SYSTEM.exe</div>
-                                        <div className="text-gray-400">Status: <span className="text-cyber-green">ACTIVE</span></div>
-                                        <div className="text-gray-400">Records: <span className="text-cyber-magenta">{UI_TEXT_CONSTANTS.educations.length}</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </HologramCard>
-                    </div>
 
                     {/* Education Cards Grid */}
                     <div className="flex justify-center w-full">
@@ -95,41 +73,43 @@ const Education = () => {
                                                 </div>
 
                                                 {/* Text Content */}
-                                                <div className="flex-1">
-                                                    <h3 className="text-lg font-bold text-cyber-cyan mb-2 font-mono group-hover:text-cyber-magenta transition-colors duration-300">
-                                                        {education.title}
-                                                    </h3>
-                                                    <p className="text-gray-300 text-sm mb-4">
-                                                        {education.institution}
-                                                    </p>
+                                                <div className="flex-1 space-y-4">
+                                                    <div>
+                                                        <h3 className="text-lg font-bold text-cyber-cyan mb-2 font-mono group-hover:text-cyber-magenta transition-colors duration-300">
+                                                            {education.title}
+                                                        </h3>
+                                                        <p className="text-gray-300 text-sm mb-4">
+                                                            {education.institution}
+                                                        </p>
+                                                    </div>
 
-                                                    {/* Status and Certificate */}
-                                                    <div className="space-y-3">
-                                                        <div className="flex items-center space-x-4 text-xs font-mono">
-                                                            <div className="flex items-center space-x-1">
-                                                                <MdVerifiedUser className="text-cyber-green" />
-                                                                <span className="text-gray-400">VERIFIED</span>
-                                                            </div>
-                                                            {education.certificado && (
-                                                                <div className="flex items-center space-x-1">
-                                                                    <MdOutlineVerified className="text-cyber-cyan" />
-                                                                    <span className="text-gray-400">CERTIFIED</span>
-                                                                </div>
-                                                            )}
+                                                    {/* Status Verification */}
+                                                    <div className="flex items-center space-x-4 text-xs font-mono">
+                                                        <div className="flex items-center space-x-1">
+                                                            <MdVerifiedUser className="text-cyber-green" />
+                                                            <span className="text-gray-400">VERIFIED</span>
                                                         </div>
-
-                                                        {/* Certificate Download Button */}
                                                         {education.certificado && (
+                                                            <div className="flex items-center space-x-1">
+                                                                <MdOutlineVerified className="text-cyber-cyan" />
+                                                                <span className="text-gray-400">CERTIFIED</span>
+                                                            </div>
+                                                        )}
+                                                    </div>
+
+                                                    {/* Certificate Download Button */}
+                                                    {education.certificado && education.certificado.trim() !== "" && (
+                                                        <div className="pt-2">
                                                             <Link 
                                                                 href={education.certificado}
                                                                 target="_blank"
-                                                                className="inline-flex items-center gap-2 bg-gradient-to-r from-cyber-cyan to-cyber-magenta px-4 py-2 rounded-md text-black font-mono text-sm font-bold hover:shadow-lg hover:shadow-cyber-cyan/25 transition-all duration-300 group-hover:scale-105"
+                                                                className="inline-flex items-center gap-2 bg-transparent border-2 border-cyber-cyan hover:border-cyber-magenta px-4 py-2 rounded-md text-cyber-cyan hover:text-cyber-magenta font-mono text-xs font-bold hover:shadow-xl hover:shadow-cyber-cyan/40 transition-all duration-300 hover:scale-105 hover:bg-cyber-cyan/10 group/btn"
                                                             >
-                                                                <MdDownload size={16} />
-                                                                <span>{UI_TEXT_CONSTANTS.educationCertificateButton}</span>
+                                                                <MdDownload size={16} className="animate-bounce group-hover/btn:animate-pulse" />
+                                                                <span className="uppercase tracking-wider">{UI_TEXT_CONSTANTS.educationCertificateButton}</span>
                                                             </Link>
-                                                        )}
-                                                    </div>
+                                                        </div>
+                                                    )}
                                                 </div>
                                             </div>
                                         </div>

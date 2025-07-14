@@ -8,12 +8,11 @@ import GlitchText from "../../ui/GlitchText";
 const AboutSection = () => {
     return (
         <section id="about" className="relative my-12 lg:my-16">
-            {/* Cyber Section Header */}
-            <div className="hidden lg:flex flex-col items-center absolute top-16 -right-8 my-5 lg:py-8">
-                <div className="bg-cyber-surface border border-cyber-cyan/50 w-fit text-cyber-cyan rotate-90 p-2 px-5 text-xl rounded-md tracking-wider font-mono backdrop-blur-sm">
-                    <span className="animate-pulse">&gt;</span> {UI_TEXT_CONSTANTS.aboutSectionTitle}
+            {/* Cyber Section Header - Centered */}
+            <div className="flex justify-center mb-8">
+                <div className="bg-cyber-surface border border-cyber-cyan/50 w-fit text-cyber-cyan p-3 px-8 text-xl rounded-md tracking-wider font-mono backdrop-blur-sm cyber-border glow-cyan">
+                    <span className="animate-pulse">&gt;</span> {UI_TEXT_CONSTANTS.aboutSectionTitle} <span className="animate-pulse">&lt;</span>
                 </div>
-                <div className="h-36 w-[2px] bg-gradient-to-b from-cyber-cyan via-cyber-magenta to-transparent"></div>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 my-5 lg:py-8">
@@ -60,7 +59,7 @@ const AboutSection = () => {
                 </div>
 
                 {/* Profile Image */}
-                <div className="flex justify-center order-1 lg:order-2">
+                <div className="flex justify-center items-start order-1 lg:order-2">
                     <HologramCard className="p-4 w-fit">
                         <div className="relative group">
                             {/* Cyber Frame */}
