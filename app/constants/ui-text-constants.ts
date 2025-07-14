@@ -23,17 +23,17 @@ export const UI_TEXT_CONSTANTS = {
   heroSubtitle: "mi nombre es",
   heroName: "Guido Espinoza",
   heroRole: "Frontend Developer",
-  heroRoleSuffix: "especializado en eCommerce.",
+  heroRoleSuffix: "especializado en e-commerce.",
   heroButtonContact: "Contáctame",
   heroButtonCV: "Obtener CV",
   heroSoyText: ", soy ",
   
   // HERO CODE SECTION - Actualizado con experiencia real
-  heroCodeComment: "// Especialista en eCommerce apasionado por la excelencia tecnológica",
+  heroCodeComment: "// Especialista en e-commerce apasionado por la excelencia tecnológica",
   heroCodeConstDeveloper: "developer",
   heroCodeName: "Guido Espinoza",
   heroCodeTechnologies: ["React", "TypeScript", "VTEX IO", "JavaScript", "SASS", "ESLint", "Git", "NextJS", "APIs"],
-  heroCodeExperience: "4 años especializándome en soluciones eCommerce sobre VTEX IO y ReactJS",
+  heroCodeExperience: "4 años especializándome en soluciones e-commerce sobre VTEX IO y ReactJS",
   heroCodeContinuousLearning: true,
   heroCodePassionate: true,
   heroCodeProblemSolver: true,
@@ -125,7 +125,7 @@ export const UI_TEXT_CONSTANTS = {
   // ABOUT SECTION - Nueva narrativa profesional y auténtica
   aboutSectionTitle: "Perfil Profesional",
   aboutWhoAmI: "¿Quién soy?",
-  aboutDescription1: "Soy Frontend Developer apasionado por el aprendizaje constante y la excelencia tecnológica. Mi especialidad es el desarrollo de soluciones eCommerce sobre VTEX IO y ReactJS, donde combino creatividad, estructura y trabajo en equipo para lograr resultados de alto impacto.",
+  aboutDescription1: "Soy Frontend Developer apasionado por el aprendizaje constante y la excelencia tecnológica. Mi especialidad es el desarrollo de soluciones e-commerce sobre VTEX IO y ReactJS, donde combino creatividad, estructura y trabajo en equipo para lograr resultados de alto impacto.",
   aboutDescription2: "Disfruto transformar ideas en experiencias digitales funcionales, escalables y atractivas. Valoro la colaboración y la mejora continua, y me esfuerzo cada día por elevar la calidad de los proyectos, optimizar procesos y facilitar el desarrollo conjunto. He liderado la implementación y mejora de sitios web desde cero, contribuyendo con componentes personalizados, repositorios reutilizables y middleware para integraciones eficientes. Me motiva enseñar, compartir tendencias y acompañar a mi equipo en el crecimiento profesional.",
 
   // EXPERIENCE SECTION

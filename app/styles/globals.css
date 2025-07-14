@@ -78,3 +78,130 @@ body {
   );
   pointer-events: none;
 }
+
+/* Evitar scroll durante animaciones hover */
+.no-scroll-on-hover {
+  overflow-x: hidden;
+}
+
+/* Skills section específico - evitar scroll vertical en hover */
+#skills .w-full {
+  overflow-x: hidden;
+  overflow-y: visible;
+}
+
+/* Mejorar efectos hover para indicar clickeable */
+.hover-effect-button {
+  transition: all 0.3s ease-in-out;
+}
+
+.hover-effect-button:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+/* Cursor pointer mejorado */
+.cursor-pointer {
+  cursor: pointer !important;
+}
+
+/* Efectos de botón mejorados */
+.button-hover-scale {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button-hover-scale:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+}
+
+/* Forzar estilos de Marquee para eliminar scroll */
+.rfm-marquee-container {
+  overflow: hidden !important;
+}
+
+.rfm-marquee {
+  overflow: hidden !important;
+}
+
+.rfm-initial-child-container,
+.rfm-child {
+  overflow: hidden !important;
+}
+
+/* Prevenir scroll durante hover en skills */
+#skills {
+  overflow: hidden !important;
+}
+
+#skills * {
+  overflow: visible !important;
+}
+
+/* Animaciones más atractivas para skills */
+@keyframes cyber-pulse {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.8), 0 0 30px rgba(255, 0, 255, 0.3);
+  }
+}
+
+@keyframes cyber-glow-intense {
+  0% {
+    filter: drop-shadow(0 0 5px rgba(0, 255, 255, 0.5));
+  }
+  50% {
+    filter: drop-shadow(0 0 15px rgba(0, 255, 255, 0.9)) drop-shadow(0 0 25px rgba(255, 0, 255, 0.5));
+  }
+  100% {
+    filter: drop-shadow(0 0 5px rgba(0, 255, 255, 0.5));
+  }
+}
+
+@keyframes cyber-float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes hologram-flicker {
+  0%, 100% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 1;
+  }
+  96% {
+    opacity: 0.8;
+  }
+  97% {
+    opacity: 1;
+  }
+  98% {
+    opacity: 0.9;
+  }
+  99% {
+    opacity: 1;
+  }
+}
+
+.skill-card-hover {
+  animation: cyber-float 3s ease-in-out infinite;
+}
+
+.skill-card-hover:hover {
+  animation: cyber-pulse 1.5s ease-in-out infinite, cyber-float 3s ease-in-out infinite;
+}
+
+.skill-icon-hover:hover {
+  animation: cyber-glow-intense 1s ease-in-out infinite;
+}
+
+.hologram-effect {
+  animation: hologram-flicker 5s ease-in-out infinite;
+}
