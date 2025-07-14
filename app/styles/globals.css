@@ -2,6 +2,24 @@
 
 :root {
   --foreground-rgb: rgb(211, 216, 232);
+  
+  /* Cyberpunk Color Variables */
+  --cyber-cyan: #00ffff;
+  --cyber-magenta: #ff00ff;
+  --cyber-green: #39ff14;
+  --cyber-orange: #ff9500;
+  --cyber-purple: #8a2be2;
+  --cyber-blue: #0080ff;
+  
+  /* Background Colors */
+  --bg-primary: #000000;
+  --bg-surface: #0a0a0a;
+  --bg-border: #1a1a1a;
+  
+  /* Glow Effects */
+  --glow-cyan: rgba(0,255,255,0.5);
+  --glow-magenta: rgba(255,0,255,0.5);
+  --glow-green: rgba(57,255,20,0.5);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -12,5 +30,51 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background-color: #0d1224;
+  background-color: var(--bg-primary);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Cyberpunk Utility Classes */
+.text-cyber-cyan { color: var(--cyber-cyan); }
+.text-cyber-magenta { color: var(--cyber-magenta); }
+.text-cyber-green { color: var(--cyber-green); }
+.text-cyber-orange { color: var(--cyber-orange); }
+
+.bg-cyber-surface { background-color: var(--bg-surface); }
+.border-cyber { border-color: var(--bg-border); }
+
+/* Basic Glow Effects */
+.glow-cyan {
+  box-shadow: 0 0 10px var(--glow-cyan);
+}
+
+.glow-magenta {
+  box-shadow: 0 0 10px var(--glow-magenta);
+}
+
+.glow-green {
+  box-shadow: 0 0 10px var(--glow-green);
+}
+
+/* Smooth transitions for cyberpunk elements */
+.cyber-transition {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Subtle scan line effect for backgrounds */
+.scan-lines::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 255, 255, 0.03) 2px,
+    rgba(0, 255, 255, 0.03) 4px
+  );
+  pointer-events: none;
 }
