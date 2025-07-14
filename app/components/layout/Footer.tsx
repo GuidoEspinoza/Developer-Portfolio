@@ -37,7 +37,7 @@ function Footer() {
                             {/* Copyright */}
                             <div className="flex flex-col md:flex-row items-center justify-center gap-2 text-center">
                                 <span className="font-mono text-gray-300">
-                                    © {currentYear} {UI_TEXT_CONSTANTS.footerCopyright}
+                                    © {currentYear}. {UI_TEXT_CONSTANTS.footerCopyright}
                                 </span>
                                 <Link 
                                     target="_blank" 
@@ -69,10 +69,10 @@ function Footer() {
                                 <div className="font-mono text-xs text-center space-y-1">
                                     <div className="text-gray-400">
                                         <span className="text-cyber-green">developer@portfolio:</span>
-                                        <span className="text-cyber-cyan">~$ echo "Thanks for visiting my digital realm"</span>
+                                        <span className="text-cyber-cyan">~$ echo "Gracias por visitar mi reino digital"</span>
                                     </div>
                                     <div className="text-cyber-magenta">
-                                        Thanks for visiting my digital realm
+                                        Gracias por visitar mi reino digital
                                     </div>
                                     <div className="text-gray-500">
                                         <span className="text-cyber-green">developer@portfolio:</span>

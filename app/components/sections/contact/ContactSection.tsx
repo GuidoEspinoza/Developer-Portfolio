@@ -16,12 +16,10 @@ import TerminalWindow from "../../ui/TerminalWindow";
 function ContactSection() {
     return (
         <section id="contact" className="my-12 lg:my-16 relative mt-24 text-white">
-            {/* Cyber Section Header */}
-            <div className="hidden lg:flex flex-col items-center absolute top-16 -right-8">
-                <div className="bg-cyber-surface border border-cyber-cyan/50 w-fit text-cyber-cyan rotate-90 p-3 px-6 text-xl rounded-md tracking-wider font-mono backdrop-blur-sm">
-                    <span className="animate-pulse">&gt;</span> {UI_TEXT_CONSTANTS.contactSectionTitle}
+            <div className="flex justify-center mb-8">
+                <div className="bg-cyber-surface border border-cyber-cyan/50 w-fit text-cyber-cyan p-3 px-8 text-xl rounded-md tracking-wider font-mono backdrop-blur-sm cyber-border glow-cyan">
+                    <span className="animate-pulse">&gt;</span> {UI_TEXT_CONSTANTS.contactSectionTitle} <span className="animate-pulse">&lt;</span>
                 </div>
-                <div className="h-36 w-[2px] bg-gradient-to-b from-cyber-cyan via-cyber-magenta to-transparent"></div>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start">

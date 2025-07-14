@@ -13,15 +13,9 @@ const Experience = () => {
     return (
         <section id="experience" className="relative z-50 my-12 lg:my-24">
             {/* Cyber Section Header */}
-            <div className="flex justify-center my-5 lg:py-8">
-                <div className="flex items-center">
-                    <div className="w-24 h-[2px] bg-gradient-to-r from-transparent to-cyber-cyan"></div>
-                    <div className="bg-cyber-surface border border-cyber-cyan/50 w-fit text-cyber-cyan p-3 px-6 text-xl rounded-md tracking-wider font-mono backdrop-blur-sm mx-4">
-                        <span className="animate-pulse text-cyber-green">[</span>
-                        <GlitchText text={UI_TEXT_CONSTANTS.experienceSectionTitle} className="mx-2" />
-                        <span className="animate-pulse text-cyber-green">]</span>
-                    </div>
-                    <div className="w-24 h-[2px] bg-gradient-to-l from-transparent to-cyber-magenta"></div>
+            <div className="flex justify-center mb-8">
+                <div className="bg-cyber-surface border border-cyber-cyan/50 w-fit text-cyber-cyan p-3 px-8 text-xl rounded-md tracking-wider font-mono backdrop-blur-sm cyber-border glow-cyan">
+                    <span className="animate-pulse">&gt;</span> {UI_TEXT_CONSTANTS.experienceSectionTitle} <span className="animate-pulse">&lt;</span>
                 </div>
             </div>
 

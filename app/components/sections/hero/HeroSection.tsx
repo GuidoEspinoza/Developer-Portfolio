@@ -33,14 +33,14 @@ const HeroSection = () => {
                             text={UI_TEXT_CONSTANTS.heroName}
                             trigger="auto"
                             intensity="low"
-                            className="text-cyber-cyan glow-cyan cyber-transition inline-block"
+                            className="text-cyber-cyan cyber-transition inline-block"
                         />
                         {UI_TEXT_CONSTANTS.heroSoyText}
                         <GlitchText 
                             text={UI_TEXT_CONSTANTS.heroRole}
                             trigger="hover"
                             intensity="medium"
-                            className="text-cyber-magenta glow-magenta cyber-transition inline-block"
+                            className="text-cyber-magenta cyber-transition inline-block"
                         /> {' '}
                         {UI_TEXT_CONSTANTS.heroRoleSuffix}
                     </h1>

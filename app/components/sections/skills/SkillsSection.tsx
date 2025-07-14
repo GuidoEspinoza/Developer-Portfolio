@@ -44,33 +44,22 @@ const skillsImage = (skill: string) => {
 
 function Skills() {
     return (
-        <section id="skills" className="relative z-50 border-t my-12 lg:my-24 border-cyber-cyan/30 cyber-border" style={{ overflow: 'hidden' }}>
+        <section id="skills" className="relative z-50 my-12 lg:my-24 border-cyber-cyan/30 cyber-border" style={{ overflow: 'hidden' }}>
             {/* Cyberpunk background effects */}
             <div className="w-[100px] h-[100px] bg-cyber-cyan/20 rounded-full absolute top-6 left-[42%] translate-x-1/2 filter blur-3xl opacity-20 glow-cyan"></div>
 
-            <div className="flex justify-center -translate-y-[1px]">
-                <div className="w-3/4">
-                    <div className="h-[1px] bg-gradient-to-r from-transparent via-cyber-cyan to-cyber-magenta w-full glow-cyan" />
-                </div>
-            </div>
-
-            <div className="flex justify-center my-5 lg:py-8">
-                <div className="flex items-center">
-                    <span className="w-24 h-[2px] bg-cyber-surface"></span>
-                    <span className="bg-cyber-surface border border-cyber-cyan w-fit text-cyber-cyan p-2 px-5 text-2xl rounded-md tracking-wider font-mono glow-text-cyan cyber-border">
-                        <GlitchText 
-                            text={UI_TEXT_CONSTANTS.skillsSectionTitle}
-                            trigger="hover"
-                            intensity="low"
-                            className="inline-block"
-                        />
-                    </span>
-                    <span className="w-24 h-[2px] bg-cyber-surface"></span>
+            <div className="flex justify-center mb-8">
+                <div className="bg-cyber-surface border border-cyber-cyan/50 w-fit text-cyber-cyan p-3 px-8 text-xl rounded-md tracking-wider font-mono backdrop-blur-sm cyber-border glow-cyan">
+                    <span className="animate-pulse">&gt;</span> {UI_TEXT_CONSTANTS.skillsSectionTitle} <span className="animate-pulse">&lt;</span>
                 </div>
             </div>
 
             {/* Skills Marquee */}
-            <div className="w-full my-12 overflow-hidden" style={{ overflow: 'hidden !important' }}>
+            <div className="relative w-full my-12 overflow-hidden" style={{ overflow: 'hidden !important' }}>
+                {/* Gradient masks for smooth fade effect */}
+                <div className="absolute left-0 top-0 w-32 h-full bg-gradient-to-r from-black via-black/80 to-transparent z-10 pointer-events-none"></div>
+                <div className="absolute right-0 top-0 w-32 h-full bg-gradient-to-l from-black via-black/80 to-transparent z-10 pointer-events-none"></div>
+                
                 <Marquee
                     gradient={false}
                     speed={60}

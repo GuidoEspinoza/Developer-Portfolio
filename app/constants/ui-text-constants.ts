@@ -171,7 +171,7 @@ export const UI_TEXT_CONSTANTS = {
   errorBoundaryConsole: "Error:",
   
   // FOOTER
-  footerCopyright: "© 2025. Todos los derechos reservados por",
+  footerCopyright: "Todos los derechos reservados por",
   footerAuthor: "Guido Espinoza",
   
   // NAVIGATION
