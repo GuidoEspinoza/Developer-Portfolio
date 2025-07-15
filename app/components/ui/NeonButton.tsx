@@ -56,32 +56,6 @@ const NeonButton: React.FC<NeonButtonProps> = ({
   const variantClasses = variants[variant];
   const sizeClasses = sizes[size];
 
-  const baseClasses = `
-    relative
-    inline-flex
-    items-center
-    justify-center
-    gap-2
-    rounded-full
-    bg-gradient-to-r
-    ${variantClasses.gradient}
-    ${variantClasses.hover}
-    ${variantClasses.glow}
-    font-medium
-    uppercase
-    tracking-wider
-    text-white
-    transition-all
-    duration-300
-    ease-out
-    transform
-    hover:scale-105
-    active:scale-95
-    cyber-transition
-    ${sizeClasses}
-    ${className}
-  `.trim().replace(/\s+/g, ' ');
-
   // For gradient border effect
   const borderClasses = `
     p-[1px]
@@ -92,6 +66,7 @@ const NeonButton: React.FC<NeonButtonProps> = ({
     ${variantClasses.glow}
     transition-all
     duration-300
+    ${className || ''}
   `.trim().replace(/\s+/g, ' ');
 
   const innerClasses = `
@@ -119,7 +94,7 @@ const NeonButton: React.FC<NeonButtonProps> = ({
         href={href}
         target={target}
         className={borderClasses}
-        {...(props as any)}
+        {...(props as React.AnchorHTMLAttributes<HTMLAnchorElement>)}
       >
         <div className={innerClasses}>
           {children}

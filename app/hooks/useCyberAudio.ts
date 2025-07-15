@@ -23,7 +23,7 @@ export const useCyberAudio = () => {
 
   useEffect(() => {
     if (config.enabled && typeof window !== 'undefined') {
-      const context = new (window.AudioContext || (window as any).webkitAudioContext)();
+      const context = new (window.AudioContext || (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext)();
       setAudioContext(context);
       
       return () => {

@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 
 interface GlitchTextProps {
   text: string;
@@ -25,12 +25,22 @@ const GlitchText: React.FC<GlitchTextProps> = ({
   const cyberChars = '01';
 
   // Generate glitched version of text
-  const generateGlitch = () => {
+  const generateGlitch = useCallback(() => {
     if (!isGlitching) return text;
+    
+    // Get glitch probability based on intensity
+    const getGlitchProbability = () => {
+      switch (intensity) {
+        case 'low': return 0.1;
+        case 'medium': return 0.2;
+        case 'high': return 0.3;
+        default: return 0.2;
+      }
+    };
     
     return text
       .split('')
-      .map((char, index) => {
+      .map((char) => {
         const shouldGlitch = Math.random() < getGlitchProbability();
         if (shouldGlitch && char !== ' ') {
           return Math.random() > 0.5 
@@ -40,17 +50,7 @@ const GlitchText: React.FC<GlitchTextProps> = ({
         return char;
       })
       .join('');
-  };
-
-  // Get glitch probability based on intensity
-  const getGlitchProbability = () => {
-    switch (intensity) {
-      case 'low': return 0.1;
-      case 'medium': return 0.2;
-      case 'high': return 0.3;
-      default: return 0.2;
-    }
-  };
+  }, [isGlitching, text, intensity]);
 
   // Handle auto glitch effect
   useEffect(() => {
@@ -83,7 +83,7 @@ const GlitchText: React.FC<GlitchTextProps> = ({
     } else {
       setGlitchText(text);
     }
-  }, [isGlitching, text]);
+  }, [isGlitching, text, generateGlitch]);
 
   // Event handlers for trigger types
   const handleMouseEnter = () => {

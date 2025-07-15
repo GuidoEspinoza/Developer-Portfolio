@@ -18,7 +18,7 @@ const AdvancedParticles: React.FC<AdvancedParticlesProps> = ({
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationIdRef = useRef<number | null>(null);
   const mouseRef = useRef({ x: 0, y: 0 });
-  const [isActive, setIsActive] = useState(true);
+  const [isActive] = useState(true);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -88,7 +88,7 @@ const AdvancedParticles: React.FC<AdvancedParticlesProps> = ({
       const animate = () => {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-        dataStreams.forEach((stream, index) => {
+        dataStreams.forEach((stream) => {
           // Efecto de atracción al mouse
           if (mouseInteraction) {
             const dx = mouseRef.current.x - stream.x;

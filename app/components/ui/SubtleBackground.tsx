@@ -84,7 +84,7 @@ const SubtleBackground: React.FC<SubtleBackgroundProps> = ({
       const animate = () => {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-        particles.forEach((particle, index) => {
+        particles.forEach((particle) => {
           // Atracción hacia el cursor (efecto sutil)
           if (interactive) {
             const dx = mouseRef.current.x - particle.x;
@@ -216,7 +216,7 @@ const SubtleBackground: React.FC<SubtleBackgroundProps> = ({
         ctx.strokeStyle = `rgba(0, 255, 255, ${opacity})`;
         ctx.lineWidth = 1;
         
-        nodes.forEach((node, i) => {
+        nodes.forEach((node) => {
           node.connections.forEach(connectionIndex => {
             const connectedNode = nodes[connectionIndex];
             ctx.beginPath();

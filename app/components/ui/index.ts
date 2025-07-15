@@ -7,9 +7,7 @@ export { default as MatrixBackground } from './MatrixBackground';
 export { default as SubtleBackground } from './SubtleBackground';
 export { default as HologramCard } from './HologramCard';
 export { default as TerminalWindow } from './TerminalWindow';
-export { default as CyberpunkLoader } from './CyberpunkLoader';
 export { default as ScanlineOverlay } from './ScanlineOverlay';
-export { default as ProgressHack } from './ProgressHack';
 export { default as CyberCursor } from './CyberCursor';
 export { default as AdvancedParticles } from './AdvancedParticles';
 

@@ -69,7 +69,7 @@ function Footer() {
                                 <div className="font-mono text-xs text-center space-y-1">
                                     <div className="text-gray-400">
                                         <span className="text-cyber-green">developer@portfolio:</span>
-                                        <span className="text-cyber-cyan">~$ echo "Gracias por visitar mi reino digital"</span>
+                                        <span className="text-cyber-cyan">~$ echo &quot;Gracias por visitar mi reino digital&quot;</span>
                                     </div>
                                     <div className="text-cyber-magenta">
                                         Gracias por visitar mi reino digital

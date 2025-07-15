@@ -26,7 +26,6 @@ interface CyberDashboardProps {
 
 const CyberDashboard: React.FC<CyberDashboardProps> = ({
   isVisible = false,
-  isFullscreen = false,
   onClose,
   onToggleFullscreen
 }) => {
