@@ -14,7 +14,7 @@ import HologramCard from "@/app/components/ui/HologramCard";
 
 const HeroSection = () => {
     return (
-        <section className="relative flex flex-col items-center justify-between py-6 sm:py-8 lg:py-12 px-2 sm:px-0">
+        <section className="relative flex flex-col items-center justify-between py-6 sm:py-8 lg:py-12">
             <Image
                 src={hero}
                 alt={UI_TEXT_CONSTANTS.altHero}

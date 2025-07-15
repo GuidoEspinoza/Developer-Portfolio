@@ -1,17 +1,13 @@
 'use client';
 
 // @flow strict
-import Image from "next/image";
 import Link from "next/link";
 
 import { IoSchoolOutline } from "react-icons/io5";
 import { MdDownload, MdVerifiedUser, MdOutlineVerified } from "react-icons/md";
 import { UI_TEXT_CONSTANTS } from "@/app/constants/ui-text-constants";
 
-import lottieFile from '../../../assets/lottie/study.json';
-import AnimationLottie from "@/app/components/ui/AnimationLottie";
 import HologramCard from "../../ui/HologramCard";
-import GlitchText from "../../ui/GlitchText";
 import TerminalWindow from "../../ui/TerminalWindow";
 
 const Education = () => {

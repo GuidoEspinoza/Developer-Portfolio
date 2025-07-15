@@ -1,11 +1,6 @@
 'use client'
-import Image from "next/image";
-import { BsPersonWorkspace } from "react-icons/bs";
 import { HiOutlineTerminal } from "react-icons/hi";
-import experience from '@/app/assets/lottie/code.json'
-import AnimationLottie from "@/app/components/ui/AnimationLottie";
 import HologramCard from "../../ui/HologramCard";
-import GlitchText from "../../ui/GlitchText";
 import TerminalWindow from "../../ui/TerminalWindow";
 import { UI_TEXT_CONSTANTS } from "@/app/constants/ui-text-constants";
 

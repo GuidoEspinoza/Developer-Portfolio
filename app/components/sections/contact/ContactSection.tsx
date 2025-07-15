@@ -6,12 +6,10 @@ import { BiLogoLinkedin } from "react-icons/bi";
 import { CiLocationOn } from "react-icons/ci";
 import { IoLogoGithub } from "react-icons/io";
 import { MdAlternateEmail, MdSignalWifi4Bar } from "react-icons/md";
-import { HiOutlineTerminal } from "react-icons/hi";
 import ContactForm from './FormContactSection';
 import { UI_TEXT_CONSTANTS } from "@/app/constants/ui-text-constants";
 import HologramCard from "../../ui/HologramCard";
 import GlitchText from "../../ui/GlitchText";
-import TerminalWindow from "../../ui/TerminalWindow";
 
 function ContactSection() {
     return (
@@ -25,7 +23,7 @@ function ContactSection() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-16 items-start">
                 {/* Contact Form */}
                 <HologramCard className="order-2 lg:order-1 mt-4 sm:mt-6 lg:mt-0">
-                    <div className="p-4 sm:p-6">
+                    <div className="sm:p-6">
                         <div className="mb-4 sm:mb-6">
                             <GlitchText 
                                 text="ESTABLISH_CONNECTION" 
@@ -45,7 +43,7 @@ function ContactSection() {
                 <div className="lg:w-full order-1 lg:order-2">
                     {/* Status Panel */}
                     <HologramCard className="mb-4 sm:mb-6">
-                        <div className="p-4 sm:p-6">
+                        <div className="sm:p-6">
                             <div className="flex items-center justify-between mb-3 sm:mb-4">
                                 <GlitchText 
                                     text="CONNECTION_STATUS" 
@@ -59,7 +57,7 @@ function ContactSection() {
                             
                             <div className="space-y-3 sm:space-y-4">
                                 {/* Email */}
-                                <div className="flex items-center gap-3 sm:gap-4 p-3 bg-cyber-surface/30 rounded border border-cyber-cyan/20 hover:border-cyber-cyan/50 transition-colors duration-300 group">
+                                <div className="flex items-center gap-1 sm:gap-4 p-3 bg-cyber-surface/30 rounded border border-cyber-cyan/20 hover:border-cyber-cyan/50 transition-colors duration-300 group">
                                     <div className="bg-cyber-cyan/20 p-2 rounded-full group-hover:bg-cyber-cyan/30 transition-colors duration-300 flex-shrink-0">
                                         <MdAlternateEmail className="text-cyber-cyan sm:hidden" size={20} />
                                         <MdAlternateEmail className="text-cyber-cyan hidden sm:block" size={24} />
@@ -77,7 +75,7 @@ function ContactSection() {
                                 </div>
 
                                 {/* Location */}
-                                <div className="flex items-center gap-3 sm:gap-4 p-3 bg-cyber-surface/30 rounded border border-cyber-cyan/20 hover:border-cyber-cyan/50 transition-colors duration-300 group">
+                                <div className="flex items-center gap-1 sm:gap-4 p-3 bg-cyber-surface/30 rounded border border-cyber-cyan/20 hover:border-cyber-cyan/50 transition-colors duration-300 group">
                                     <div className="bg-cyber-cyan/20 p-2 rounded-full group-hover:bg-cyber-cyan/30 transition-colors duration-300 flex-shrink-0">
                                         <CiLocationOn className="text-cyber-cyan sm:hidden" size={20} />
                                         <CiLocationOn className="text-cyber-cyan hidden sm:block" size={24} />
@@ -96,7 +94,7 @@ function ContactSection() {
 
                     {/* Social Networks */}
                     <HologramCard>
-                        <div className="p-4 sm:p-6">
+                        <div className="sm:p-6">
                             <div className="mb-3 sm:mb-4">
                                 <GlitchText 
                                     text="SOCIAL_NETWORKS" 

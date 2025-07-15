@@ -35,10 +35,10 @@ const AboutSection = () => {
                             </div>
                             
                             <div className="border-l-2 border-cyber-cyan/30 pl-3 sm:pl-4 space-y-3">
-                                <p className="text-gray-300 text-xs sm:text-sm lg:text-base leading-relaxed">
+                                <p className="text-gray-300 text-s sm:text-sm lg:text-base leading-relaxed">
                                     {UI_TEXT_CONSTANTS.aboutDescription1}
                                 </p>
-                                <p className="text-gray-300 text-xs sm:text-sm lg:text-base leading-relaxed">
+                                <p className="text-gray-300 text-s sm:text-sm lg:text-base leading-relaxed">
                                     {UI_TEXT_CONSTANTS.aboutDescription2}
                                 </p>
                             </div>

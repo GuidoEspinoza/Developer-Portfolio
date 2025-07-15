@@ -4,7 +4,6 @@ import Image from "next/image";
 import Marquee from "react-fast-marquee";
 import { UI_TEXT_CONSTANTS } from "@/app/constants/ui-text-constants";
 import HologramCard from "@/app/components/ui/HologramCard";
-import GlitchText from "@/app/components/ui/GlitchText";
 
 import html from "@/app/assets/svg/html.svg";
 import css from "@/app/assets/svg/css.svg";
@@ -44,7 +43,7 @@ const skillsImage = (skill: string) => {
 
 function Skills() {
     return (
-        <section id="skills" className="relative z-50 my-6 sm:my-8 lg:my-12 xl:my-24 border-cyber-cyan/30 cyber-border px-2 sm:px-0" style={{ overflow: 'hidden' }}>
+        <section id="skills" className="relative z-50 my-6 sm:my-8 lg:my-12 xl:my-24 border-cyber-cyan/30 cyber-border" style={{ overflow: 'hidden' }}>
             {/* Cyberpunk background effects */}
             <div className="w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] bg-cyber-cyan/20 rounded-full absolute top-6 left-[42%] translate-x-1/2 filter blur-3xl opacity-20 glow-cyan"></div>
 

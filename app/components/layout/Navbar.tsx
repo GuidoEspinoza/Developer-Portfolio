@@ -6,7 +6,6 @@ import { navigationLinks } from '@/app/constants/navigation';
 import { UI_TEXT_CONSTANTS } from '@/app/constants/ui-text-constants';
 
 const Navbar = () => {
-    const [activeSection, setActiveSection] = useState('');
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
