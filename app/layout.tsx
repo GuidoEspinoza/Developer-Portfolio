@@ -6,6 +6,7 @@ import Navbar from "./components/layout/Navbar";
 import ScrollToTop from "./components/layout/ScrollToTop";
 import Footer from "./components/layout/Footer";
 import ErrorBoundary from './components/common/ErrorBoundary';
+import CyberEffectsProvider from './components/providers/CyberEffectsProvider';
 
 import "./styles/globals.css";
 import "./styles/animations.css"
@@ -33,10 +34,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className={`${inter.className} antialiased`}>
+      <body className={`${inter.className} antialiased`} style={{ overflowX: 'hidden' }}>
         <ErrorBoundary>
-          <main className="min-h-screen relative mx-auto px-6 sm:px-12 lg:max-w-[70rem] xl:max-w-[76rem] 2xl:max-w-[92rem] text-white">
-            <Navbar />
+          {/* Cyber Effects */}
+          <CyberEffectsProvider />
+          
+          {/* Fixed Header */}
+          <Navbar />
+          
+          <main className="min-h-screen relative mx-auto px-6 sm:px-12 lg:max-w-[70rem] xl:max-w-[76rem] 2xl:max-w-[92rem] text-white z-40 pt-24" style={{ overflowX: 'hidden' }}>
             {children}
             <Footer />
           </main>

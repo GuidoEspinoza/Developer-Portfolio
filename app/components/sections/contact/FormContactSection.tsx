@@ -71,20 +71,20 @@ function ContactForm() {
 
     return (
         <div>
-            <p className="font-medium mb-5 text-[#16f2b3] text-xl uppercase">{UI_TEXT_CONSTANTS.contactFormTitle}</p>
-            <div className="max-w-3xl text-white rounded-lg border border-[#464c6a] p-3 lg:p-5">
-                <p className="text-sm text-[#d3d8e8]">
+            <p className="font-medium mb-4 sm:mb-5 text-[#16f2b3] text-lg sm:text-xl uppercase">{UI_TEXT_CONSTANTS.contactFormTitle}</p>
+            <div className="max-w-3xl text-white rounded-lg border border-[#464c6a] p-3 sm:p-4 lg:p-5">
+                <p className="text-sm text-[#d3d8e8] break-words">
                     {UI_TEXT_CONSTANTS.contactFormDescription}
                 </p>
-                <form className="mt-6 flex flex-col gap-4" onSubmit={handleSendMail}>
+                <form className="mt-4 sm:mt-6 flex flex-col gap-3 sm:gap-4" onSubmit={handleSendMail}>
                     <div className="flex flex-col gap-2">
-                        <label htmlFor="name" className="text-base">
+                        <label htmlFor="name" className="text-sm sm:text-base font-mono text-cyber-cyan">
                             {UI_TEXT_CONSTANTS.contactFormNameLabel}
                         </label>
                         <input
                             id="name"
                             name="name"
-                            className="bg-[#10172d] w-full border rounded-md border-[#353a52] focus:border-[#16f2b3] ring-0 outline-0 transition-all duration-300 px-3 py-2"
+                            className="bg-[#10172d] w-full border rounded-md border-[#353a52] focus:border-[#16f2b3] ring-0 outline-0 transition-all duration-300 px-3 py-2 text-sm sm:text-base"
                             type="text"
                             maxLength={100}
                             required
@@ -97,13 +97,13 @@ function ContactForm() {
                     </div>
 
                     <div className="flex flex-col gap-2">
-                        <label htmlFor="email" className="text-base">
+                        <label htmlFor="email" className="text-sm sm:text-base font-mono text-cyber-cyan">
                             {UI_TEXT_CONSTANTS.contactFormEmailLabel}
                         </label>
                         <input
                             id="email"
                             name="email"
-                            className="bg-[#10172d] w-full border rounded-md border-[#353a52] focus:border-[#16f2b3] ring-0 outline-0 transition-all duration-300 px-3 py-2"
+                            className="bg-[#10172d] w-full border rounded-md border-[#353a52] focus:border-[#16f2b3] ring-0 outline-0 transition-all duration-300 px-3 py-2 text-sm sm:text-base"
                             type="email"
                             maxLength={100}
                             required
@@ -117,18 +117,18 @@ function ContactForm() {
                             }}
                         />
                         {error.email && (
-                            <p className="text-sm text-red-400">{UI_TEXT_CONSTANTS.contactFormErrorInvalidEmail}</p>
+                            <p className="text-sm text-red-400 break-words">{UI_TEXT_CONSTANTS.contactFormErrorInvalidEmail}</p>
                         )}
                     </div>
 
                     <div className="flex flex-col gap-2">
-                        <label htmlFor="message" className="text-base">
+                        <label htmlFor="message" className="text-sm sm:text-base font-mono text-cyber-cyan">
                             {UI_TEXT_CONSTANTS.contactFormMessageLabel}
                         </label>
                         <textarea
                             id="message"
                             name="message"
-                            className="bg-[#10172d] w-full border rounded-md border-[#353a52] focus:border-[#16f2b3] ring-0 outline-0 transition-all duration-300 px-3 py-2"
+                            className="bg-[#10172d] w-full border rounded-md border-[#353a52] focus:border-[#16f2b3] ring-0 outline-0 transition-all duration-300 px-3 py-2 text-sm sm:text-base resize-none"
                             maxLength={500}
                             required
                             aria-required="true"
@@ -140,24 +140,35 @@ function ContactForm() {
                         />
                     </div>
 
-                    <div className="flex flex-col items-center gap-3">
+                    <div className="flex flex-col items-center gap-3 mt-2 sm:mt-3">
                         {error.required && (
-                            <p className="text-sm text-red-400">{UI_TEXT_CONSTANTS.contactFormErrorRequired}</p>
+                            <p className="text-sm text-red-400 text-center break-words">{UI_TEXT_CONSTANTS.contactFormErrorRequired}</p>
                         )}
                         <button
-                            className="flex items-center gap-1 hover:gap-3 rounded-full bg-gradient-to-r from-pink-500 to-violet-600 px-5 md:px-12 py-2.5 md:py-3 text-center text-xs md:text-sm font-medium uppercase tracking-wider text-white no-underline transition-all duration-200 ease-out hover:text-white hover:no-underline md:font-semibold cursor-pointer"
+                            className="group relative inline-flex items-center gap-2 bg-transparent border-2 border-cyber-cyan hover:border-cyber-magenta px-6 sm:px-8 py-3 sm:py-4 rounded-md text-cyber-cyan hover:text-cyber-magenta font-mono text-xs sm:text-sm font-bold uppercase tracking-wider transition-all duration-300 hover:shadow-xl hover:shadow-cyber-cyan/30 hover:bg-cyber-cyan/10 overflow-hidden w-full sm:w-auto justify-center"
                             type="submit"
                             tabIndex={0}
                             disabled={isLoading}
                         >
-                            {isLoading ? (
-                                <span>{UI_TEXT_CONSTANTS.contactFormSubmitButtonLoading}</span>
-                            ) : (
-                                <span className="flex items-center gap-1">
-                                    {UI_TEXT_CONSTANTS.contactFormSubmitButton}
-                                    <TbMailForward size={20} />
-                                </span>
-                            )}
+                            {/* Background glow effect */}
+                            <div className="absolute inset-0 bg-gradient-to-r from-cyber-cyan/20 to-cyber-magenta/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            
+                            {/* Scan line effect */}
+                            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-cyber-cyan/30 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+                            
+                            <span className="relative z-10 flex items-center gap-2">
+                                {isLoading ? (
+                                    <>
+                                        <div className="w-4 h-4 border-2 border-cyber-cyan border-t-transparent rounded-full animate-spin"></div>
+                                        <span className="whitespace-nowrap">{UI_TEXT_CONSTANTS.contactFormSubmitButtonLoading}</span>
+                                    </>
+                                ) : (
+                                    <>
+                                        <span className="whitespace-nowrap">{UI_TEXT_CONSTANTS.contactFormSubmitButton}</span>
+                                        <TbMailForward size={18} className="group-hover:translate-x-1 transition-transform duration-300 flex-shrink-0 sm:size-5" />
+                                    </>
+                                )}
+                            </span>
                         </button>
                     </div>
                 </form>

@@ -30,12 +30,24 @@ const ContactSection = dynamic(() => import("./components/sections/contact/Conta
 export default function Home() {
   return (
     <div suppressHydrationWarning>
-      <HeroSection />
-      <AboutSection />
-      <ExperienceSection />
-      <SkillsSection />
-      <EducationSection />
-      <ContactSection />
+      <section id="home">
+        <HeroSection />
+      </section>
+      <section id="about">
+        <AboutSection />
+      </section>
+      <section id="experience">
+        <ExperienceSection />
+      </section>
+      <section id="skills">
+        <SkillsSection />
+      </section>
+      <section id="education">
+        <EducationSection />
+      </section>
+      <section id="contact">
+        <ContactSection />
+      </section>
     </div>
   );
 }
