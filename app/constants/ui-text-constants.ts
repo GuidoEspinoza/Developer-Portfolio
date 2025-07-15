@@ -136,7 +136,7 @@ export const UI_TEXT_CONSTANTS = {
   skillsData: ["HTML", "CSS", "Javascript", "ReactJS", "Typescript", "Tailwind", "NextJS", "VtexIO", "Git"],
 
   // EDUCATION SECTION
-  educationSectionTitle: "Educación / Certificaciones",
+  educationSectionTitle: "Certificaciones",
   educationCertificateButton: "Obtener Certificado",
 
   // CONTACT SECTION

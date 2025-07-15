@@ -64,7 +64,7 @@ const HeroSection = () => {
                         </Link>
                     </div>
 
-                    <div className="flex items-center gap-3">
+                    <div className="flex items-center w-full gap-3 flex-col lg:flex-row justify-center md:justify-start">
                         <Link href="#contact" className="group">
                             <NeonButton
                                 variant="primary"

@@ -10,7 +10,7 @@ const AboutSection = () => {
         <section id="about" className="relative my-12 lg:my-16">
             {/* Cyber Section Header - Centered */}
             <div className="flex justify-center mb-8">
-                <div className="bg-cyber-surface border border-cyber-cyan/50 w-fit text-cyber-cyan p-3 px-8 text-xl rounded-md tracking-wider font-mono backdrop-blur-sm cyber-border glow-cyan">
+                <div className="bg-cyber-surface border border-cyber-cyan/50 w-fit text-cyber-cyan p-3 px-8 text-lg md:text-xl rounded-md tracking-wider font-mono backdrop-blur-sm cyber-border glow-cyan">
                     <span className="animate-pulse">&gt;</span> {UI_TEXT_CONSTANTS.aboutSectionTitle} <span className="animate-pulse">&lt;</span>
                 </div>
             </div>
