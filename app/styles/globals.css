@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+/* Scroll suavizado global */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px; /* Compensa la altura del header fijo */
+}
+
 :root {
   --foreground-rgb: rgb(211, 216, 232);
   
