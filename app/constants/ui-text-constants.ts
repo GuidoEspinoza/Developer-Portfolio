@@ -15,7 +15,7 @@ export const UI_TEXT_CONSTANTS = {
     email: "contacto@guidoespinoza.dev",
     emailHref: "mailto:contacto@guidoespinoza.dev",
     cvUrl: "https://wrdc7yopavc4jezh.public.blob.vercel-storage.com/CV_Guido_Espinoza.pdf",
-    profileImage: "https://wrdc7yopavc4jezh.public.blob.vercel-storage.com/profile_image-eDka2DSUzuoJa9uQ4FmgZvab8rjppC.png"
+    profileImage: "https://wrdc7yopavc4jezh.public.blob.vercel-storage.com/profile_image_2.jpeg"
   },
 
   // HERO SECTION - Nueva narrativa cyberpunk profesional
